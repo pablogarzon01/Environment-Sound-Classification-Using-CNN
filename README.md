@@ -12,14 +12,14 @@ Como fuente principal para la extracion de los datos se utiliza el conjunto de d
 
 ## Tabla de contenidos:
 ---
-- [1. Contexto de la clasificación de sonidos del entorno](#contexto-de-la-clasificación-de-sonidos-del-entorno)  
-- [2. Procesamiento de datos](#procesamiento-de-datos)  
-- [3. Extracción de características](#extracción-de-características)  
-  - [3.1. Características artesanales](#características-artesanales)  
-  - [3.2. Representaciones basadas en STFT y CWT](#representaciones-basadas-en-stft-y-cwt)  
-- [4. Modelos de clasificación](#modelos-de-clasificación)  
-  - [4.1. Redes neuronales convolucionales (CNN)](#redes-neuronales-convolucionales-cnn)  
-- [5. Documento académico y resultados](#documento-académico-y-resultados)  
+- [Contexto de la clasificación de sonidos del entorno](#contexto-de-la-clasificación-de-sonidos-del-entorno)  
+- [1. Procesamiento de datos](#procesamiento-de-datos)  
+- [2. Extracción de características](#extracción-de-características)  
+  - [2.1. Características artesanales](#características-artesanales)  
+  - [2.2. Representaciones basadas en STFT y CWT](#representaciones-basadas-en-stft-y-cwt)  
+- [3. Modelos de clasificación](#modelos-de-clasificación)  
+  - [3.1. Redes neuronales convolucionales (CNN)](#redes-neuronales-convolucionales-cnn)  
+- [4. Documento académico y resultados](#documento-académico-y-resultados)  
 
 
 
