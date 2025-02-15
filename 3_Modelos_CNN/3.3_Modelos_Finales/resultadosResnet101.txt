@@ -1,0 +1,128 @@
+=== Resultados Finales ===
+[   {   'Accuracy': 0.8759328358208955,
+        'FLOPs': 147421488,
+        'Macro F1': 0.8756753765974381,
+        'Representation': 'Mel-512',
+        'Stage': 'Transfer Learning',
+        'Weighted F1': 0.8761969145055332},
+    {   'Accuracy': 0.7294776119402985,
+        'FLOPs': 147421488,
+        'Macro F1': 0.7297769348151155,
+        'Representation': 'Mel-512',
+        'Stage': 'Fine-Tuning',
+        'Weighted F1': 0.728917390597129},
+    {   'Accuracy': 0.8824626865671642,
+        'FLOPs': 147421488,
+        'Macro F1': 0.8826573029812799,
+        'Representation': 'Mel-1024',
+        'Stage': 'Transfer Learning',
+        'Weighted F1': 0.8824394494102503},
+    {   'Accuracy': 0.8208955223880597,
+        'FLOPs': 147421488,
+        'Macro F1': 0.8198707657406121,
+        'Representation': 'Mel-1024',
+        'Stage': 'Fine-Tuning',
+        'Weighted F1': 0.8206458868540205},
+    {   'Accuracy': 0.9002795899347623,
+        'FLOPs': 147421488,
+        'Macro F1': 0.8986919310483044,
+        'Representation': 'Mel-2048',
+        'Stage': 'Transfer Learning',
+        'Weighted F1': 0.8998527915224228},
+    {   'Accuracy': 0.8462255358807083,
+        'FLOPs': 147421488,
+        'Macro F1': 0.8453212538094974,
+        'Representation': 'Mel-2048',
+        'Stage': 'Fine-Tuning',
+        'Weighted F1': 0.8461851448135392},
+    {   'Accuracy': 0.8544776119402985,
+        'FLOPs': 147421488,
+        'Macro F1': 0.8529364460249967,
+        'Representation': 'Bump',
+        'Stage': 'Transfer Learning',
+        'Weighted F1': 0.8540323235683758},
+    {   'Accuracy': 0.7742537313432836,
+        'FLOPs': 147421488,
+        'Macro F1': 0.7718813594517347,
+        'Representation': 'Bump',
+        'Stage': 'Fine-Tuning',
+        'Weighted F1': 0.7747107407743563},
+    {   'Accuracy': 0.8330223880597015,
+        'FLOPs': 147421488,
+        'Macro F1': 0.8313860441593997,
+        'Representation': 'Morlet',
+        'Stage': 'Transfer Learning',
+        'Weighted F1': 0.8336638218803917},
+    {   'Accuracy': 0.7444029850746269,
+        'FLOPs': 147421488,
+        'Macro F1': 0.742917719842911,
+        'Representation': 'Morlet',
+        'Stage': 'Fine-Tuning',
+        'Weighted F1': 0.746269241616159}]
+
+=== Carga Computacional ===
+[   {   'CPU_FT (avg)': 19.6,
+        'CPU_TL (avg)': 15.9,
+        'Memory_FT (avg)': 74.9,
+        'Memory_TL (avg)': 63.4,
+        'Representation': 'Mel-512'},
+    {   'CPU_FT (avg)': 9.8,
+        'CPU_TL (avg)': 8.0,
+        'Memory_FT (avg)': 76.8,
+        'Memory_TL (avg)': 77.4,
+        'Representation': 'Mel-1024'},
+    {   'CPU_FT (avg)': 5.8,
+        'CPU_TL (avg)': 9.5,
+        'Memory_FT (avg)': 67.4,
+        'Memory_TL (avg)': 70.4,
+        'Representation': 'Mel-2048'},
+    {   'CPU_FT (avg)': 11.2,
+        'CPU_TL (avg)': 7.4,
+        'Memory_FT (avg)': 68.5,
+        'Memory_TL (avg)': 65.5,
+        'Representation': 'Bump'},
+    {   'CPU_FT (avg)': 8.1,
+        'CPU_TL (avg)': 2.8,
+        'Memory_FT (avg)': 66.0,
+        'Memory_TL (avg)': 68.8,
+        'Representation': 'Morlet'}]
+
+=== Tiempos de Entrenamiento ===
+[   {   'Representation': 'Mel-512',
+        'Time FT (seconds)': 639.8446159362793,
+        'Time TL (seconds)': 789.466908454895},
+    {   'Representation': 'Mel-1024',
+        'Time FT (seconds)': 990.6886093616486,
+        'Time TL (seconds)': 575.1458804607391},
+    {   'Representation': 'Mel-2048',
+        'Time FT (seconds)': 1148.9303295612335,
+        'Time TL (seconds)': 635.3838284015656},
+    {   'Representation': 'Bump',
+        'Time FT (seconds)': 741.9065008163452,
+        'Time TL (seconds)': 611.3306224346161},
+    {   'Representation': 'Morlet',
+        'Time FT (seconds)': 656.7545917034149,
+        'Time TL (seconds)': 702.3399832248688}]=== Resultados de metricas de precision ===
+  Representation              Stage  Accuracy  Macro F1  Weighted F1  \
+0        Mel-512  Transfer Learning  0.875933  0.875675     0.876197   
+1        Mel-512        Fine-Tuning  0.729478  0.729777     0.728917   
+2       Mel-1024  Transfer Learning  0.882463  0.882657     0.882439   
+3       Mel-1024        Fine-Tuning  0.820896  0.819871     0.820646   
+4       Mel-2048  Transfer Learning  0.900280  0.898692     0.899853   
+5       Mel-2048        Fine-Tuning  0.846226  0.845321     0.846185   
+6           Bump  Transfer Learning  0.854478  0.852936     0.854032   
+7           Bump        Fine-Tuning  0.774254  0.771881     0.774711   
+8         Morlet  Transfer Learning  0.833022  0.831386     0.833664   
+9         Morlet        Fine-Tuning  0.744403  0.742918     0.746269   
+
+       FLOPs  Average Score  
+0  147421488       0.875935  
+1  147421488       0.729391  
+2  147421488       0.882520  
+3  147421488       0.820471  
+4  147421488       0.899608  
+5  147421488       0.845911  
+6  147421488       0.853815  
+7  147421488       0.773615  
+8  147421488       0.832691  
+9  147421488       0.744530  

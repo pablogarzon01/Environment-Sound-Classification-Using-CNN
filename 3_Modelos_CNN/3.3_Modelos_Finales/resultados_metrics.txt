@@ -1,0 +1,24 @@
+=== Resultados de metricas de precision ===
+  Representation              Stage  Accuracy  Macro F1  Weighted F1  \
+0        Mel-512  Transfer Learning  0.860075  0.858617     0.860653   
+1        Mel-512        Fine-Tuning  0.919776  0.918638     0.919476   
+2       Mel-1024  Transfer Learning  0.878731  0.878159     0.879524   
+3       Mel-1024        Fine-Tuning  0.936567  0.936024     0.936410   
+4       Mel-2048  Transfer Learning  0.896552  0.895797     0.897054   
+5       Mel-2048        Fine-Tuning  0.922647  0.920684     0.922071   
+6           Bump  Transfer Learning  0.618470  0.610429     0.616792   
+7           Bump        Fine-Tuning  0.914179  0.912048     0.913949   
+8         Morlet  Transfer Learning  0.725746  0.720296     0.724100   
+9         Morlet        Fine-Tuning  0.859142  0.857027     0.860900   
+
+      FLOPs  Average Score  
+0  84628140       0.859782  
+1  84628140       0.919297  
+2  84628140       0.878805  
+3  84628140       0.936334  
+4  84628140       0.896468  
+5  84628140       0.921801  
+6  84628140       0.615231  
+7  84628140       0.913392  
+8  84628140       0.723381  
+9  84628140       0.859023  
