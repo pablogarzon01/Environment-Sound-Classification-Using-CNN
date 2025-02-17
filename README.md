@@ -1,7 +1,9 @@
 
 
 ##  :sound:  Clasificación de sonidos ambientales utilizando representaciones tiempo - frecuencia
-
+   <p align="left">
+   <img src="https://img.shields.io/badge/STATUS-Activo-green">
+   </p>
 Este es un proyecto de investigación en el área del procesamiento de señales digitales, enfocado en el analisis de las señales no-estacionarias abordadas desde la representación tiempo-frecuencia, además considerando la variación  de los parametros en la creación de imagenes basadas en la `Short Time Fourier Transform ` y la `Continous Walavet Transform`.
 
 Como fuente principal para la extracción de los datos se utiliza el conjunto de datos **UbanSound8k**, que soportan los datos y resultados obtenidos del análisis previo al tratamiento de los segmentos de audio.
