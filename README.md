@@ -35,8 +35,25 @@ En este proyecto se plantea evaluar el proceso de clasificación de sonidos ambi
 Por último, se reflejan los resultados de la eficiencia computacional  de utilizar  cada una de las representaciones tipo espectrograma o escalograma respecto a los modelos `VGG16`  y `Resnet101` considerando que conjunto de recursos presenta ser el más precisó y óptimo para realizar un proceso de clasificación satisfactorio.
 
 ## Procesamiento de datos
-Aquí va el contenido sobre el procesamiento de datos.
+El preprocesamiento de datos adapta el conjunto **UrbanSound8k** para la discriminación de eventos acústicos a partir de su representación visual. Se eliminan las clases **gun_shot** y **car_horn** debido a su menor cantidad de muestras, garantizando un balance en el conjunto final.  
 
+### Distribución y Duración de los Segmentos  
+
+- **Duración de los segmentos**: UrbanSound8k contiene audios de hasta **4 segundos**, con el **93.3%** de las muestras entre **3 y 4 segundos**, mientras que el **6.1%** tiene duraciones menores.  
+- Para uniformizar la representación espectral, todas las clases se ajustan a **766 muestras**.  
+- Se aplica **Zero Padding** a los segmentos menores de 4 segundos para estandarizar su duración.  
+
+### Clases Seleccionadas  
+
+Las clases incluidas en el conjunto final son:  
+
+- `air_conditioner`  
+- `children_playing`  
+- `drilling`  
+- `engine_idling`  
+- `jackhammer`  
+- `siren`  
+- `street_music`  
 ## Extracción de características
 Aquí va la información general sobre la extracción de características.
 
