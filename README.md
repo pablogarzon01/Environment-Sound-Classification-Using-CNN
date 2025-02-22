@@ -64,22 +64,54 @@ Aquí va el contenido sobre características artesanales.
 Aquí va el contenido sobre representaciones basadas en STFT y CWT.
 
 ## Modelos de clasificación
-Aquí va la información general sobre modelos de clasificación.
 
-### Redes neuronales convolucionales (CNN)
-Aquí va el contenido sobre el uso de CNN en la clasificación de sonidos.
+### VGG16  
+
+VGG16 es un modelo ampliamente reconocido en visión por computadora debido a su alto rendimiento. Desarrollado por el **Visual Geometry Group (VGG)** de la Universidad de Oxford, su arquitectura está compuesta por:  
+
+- **13 capas convolucionales**,  
+- **5 capas de Max Pooling**,  
+- **3 capas totalmente conectadas**,  
+- **16 capas con pesos entrenables**,  
+- **138 millones de parámetros** en total.  
+
+El modelo opera con imágenes de entrada de **224x224 píxeles** en formato **RGB**. Se caracteriza por su simplicidad en los hiperparámetros:  
+
+- **Filtros convolucionales** de `3x3`, con **stride** de `1` y **padding** para mantener dimensiones.  
+- **Capas Max Pooling** con filtros de `2x2` y **stride** de `2`.  
+
+El bloque final de capas totalmente conectadas clasifica imágenes en **1000 categorías**, utilizando **Softmax** para convertir las salidas en probabilidades. Gracias a su estructura eficiente, **VGG16** es un modelo de referencia en reconocimiento de imágenes.  
+
+---  
+
+### ResNet: Redes Neuronales Residuales  
+
+A diferencia de CNN convencionales, **ResNet** introduce conexiones residuales que mitigan el problema del **desvanecimiento de gradiente** y la degradación del rendimiento en redes profundas. Su arquitectura es especialmente útil en **clasificación de sonidos ambientales**, ya que permite capturar patrones complejos en señales de audio.  
+
+#### **Aprendizaje Residual**  
+
+ResNet emplea **mapeo de identidad**, donde la salida de una capa puede igualar el valor de la capa previa. Esto facilita:  
+
+- Conservar información en modelos profundos.  
+- Evitar transformaciones innecesarias en capas convolucionales.  
+- Optimizar el aprendizaje al enfocarse en pequeñas correcciones.  
+
+Los bloques residuales se expresan como:  
+
+\[
+H(x) = F(x) + x
+\]
+
+Donde `x` representa la identidad preservada, y `F(x)` son transformaciones aprendidas. Si no hay cambios entre capas consecutivas, la conexión residual pasa directamente a la salida.  
+
+#### **Estructura de ResNet**  
+
+- **Compatible con imágenes de 224x224 píxeles**.  
+- **Capa de Max Pooling** de `3x3`, **stride** de `2`.  
+- Disponible en versiones de **18, 24, 50, 101 y 152 capas**.  
 
 ## Documento académico y resultados
 Aquí va el contenido sobre la documentación académica y los resultados obtenidos.
-
-
-
-
-
-
-
-
-
 
 
 
