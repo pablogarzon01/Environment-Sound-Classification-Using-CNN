@@ -19,8 +19,9 @@ Como fuente principal para la extracción de los datos se utiliza el conjunto de
 - [2. Extracción de características](#extracción-de-características)  
   - [2.1. Características artesanales](#características-artesanales)  
   - [2.2. Representaciones basadas en STFT y CWT](#representaciones-basadas-en-stft-y-cwt)  
-- [3. Modelos de clasificación](#modelos-de-clasificación)  
-  - [3.1. Redes neuronales convolucionales (CNN)](#redes-neuronales-convolucionales-cnn)  
+- [3. Modelos de clasificación](#modelos-de-clasificación)
+  - [3.1. VGG16](#VGG16)  
+  - [3.2. ResNet](#ResNet)  
 - [4. Documento académico y resultados](#documento-académico-y-resultados)  
 
 
@@ -84,7 +85,7 @@ El bloque final de capas totalmente conectadas clasifica imágenes en **1000 cat
 
 ---  
 
-### ResNet: Redes Neuronales Residuales  
+### ResNet
 
 A diferencia de CNN convencionales, **ResNet** introduce conexiones residuales que mitigan el problema del **desvanecimiento de gradiente** y la degradación del rendimiento en redes profundas. Su arquitectura es especialmente útil en **clasificación de sonidos ambientales**, ya que permite capturar patrones complejos en señales de audio.  
 
