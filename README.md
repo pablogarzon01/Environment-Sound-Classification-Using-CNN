@@ -62,7 +62,48 @@ Aquí va la información general sobre la extracción de características.
 Aquí va el contenido sobre características artesanales.
 
 ### Representaciones basadas en STFT y CWT
-Aquí va el contenido sobre representaciones basadas en STFT y CWT.
+Las señales de audio pueden transformarse para equilibrar su capacidad informativa y mejorar su uso en tareas de clasificación. Existen dos enfoques principales:
+
+- **Características artesanales**: Cálculos unidimensionales extraídos directamente de la señal (por ejemplo: RMS, ZCR). Suelen ser limitados para capturar la complejidad del sonido.
+- **Características visuales**: Derivadas de transformaciones tiempo-frecuencia (como espectrogramas o escalogramas) o de descriptores de textura visual como LBP, LTP o HOG.
+
+---
+
+## Espectrograma (STFT)
+
+El espectrograma se genera aplicando la Transformada de Fourier de ventanas móviles a la señal de audio. Esto permite representar cómo varía la energía en distintas frecuencias a lo largo del tiempo.
+
+**Fórmula:**
+
+$$
+|X(t, f)|^2 = \left| \int_{-\infty}^{\infty} x(\tau) \cdot w(\tau - t) \cdot e^{-j 2\pi f \tau} \, d\tau \right|^2
+$$
+
+**Términos:**
+- $$\( x(\tau) \)$$: Señal original en el dominio temporal.
+- $$\( w(\tau - t) \)$$: Función ventana centrada en el tiempo $$\( t \)$$.
+- El resultado es la **densidad espectral de potencia**, que indica cuánta energía tiene la señal en cada frecuencia $$\( f \)$$ en un instante $$\( t \)$$.
+
+---
+
+## Scalograma (CWT)
+
+El escalograma se basa en la **Transformada Wavelet Continua (CWT)**, que analiza la señal utilizando funciones base llamadas *wavelets*, escaladas y desplazadas.
+
+**Fórmula:**
+
+$$
+\text{CWT}(u, s) = \frac{1}{\sqrt{s}} \int_{-\infty}^{\infty} x(t) \cdot \psi^*\left( \frac{t - u}{s} \right) \, dt
+$$
+
+**Términos:**
+- $$\( \psi(t) \)$$: Wavelet madre.
+- $$\( u \)$$: Traslación temporal.
+- $$\( s \)$$: Escala (inversamente proporcional a la frecuencia).
+- $$\( \psi^* \)$$: Conjugada compleja de la wavelet.
+
+La CWT no usa ventanas fijas como en el STFT, lo que permite una representación más adaptativa. Proporciona una vista densa y continua del contenido espectral, ideal para capturar eventos transitorios en señales de audio.
+Estas representaciones visuales son fundamentales para entrenar modelos de redes neuronales convolucionales (CNN) en tareas de clasificación de sonidos ambientales.
 
 ## Modelos de clasificación
 
