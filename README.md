@@ -58,9 +58,6 @@ Las clases incluidas en el conjunto final son:
 ## Extracción de características
 Aquí va la información general sobre la extracción de características.
 
-### Características artesanales
-Aquí va el contenido sobre características artesanales.
-
 ### Representaciones basadas en STFT y CWT
 Las señales de audio pueden transformarse para equilibrar su capacidad informativa y mejorar su uso en tareas de clasificación. Existen dos enfoques principales:
 
@@ -152,8 +149,43 @@ Donde `x` representa la identidad preservada, y `F(x)` son transformaciones apre
 - **Capa de Max Pooling** de `3x3`, **stride** de `2`.  
 - Disponible en versiones de **18, 24, 50, 101 y 152 capas**.  
 
-## Documento académico y resultados
-Aquí va el contenido sobre la documentación académica y los resultados obtenidos.
+### 🧠 Entrenamiento de Modelos CNN
+
+Se utilizaron tres arquitecturas de redes neuronales convolucionales: **ResNet101V2**, **MobileNetV2** y **VGG16**, entrenadas sobre cinco representaciones visuales distintas: `Mel-512`, `Mel-1024`, `Mel-2048`, `Morlet` y `Bump`.
+
+El proceso de entrenamiento fue automatizado mediante un único script, utilizando el optimizador **Adam** con tasas de aprendizaje dinámicas entre `1e-5` y `1e-7`, `50` épocas, y lotes de `50` imágenes. Para mejorar la generalización y prevenir el sobreajuste, se incorporaron técnicas como:
+- **Dropout** (50%)
+- **Batch Normalization**
+- **Penalización L2**
+- **Early Stopping**
+
+La partición de los datos se realizó con validación *hold-out* estratificada (`70%` entrenamiento / `30%` validación).
+
+---
+
+### 🔧 Optimización de Hiperparámetros
+
+Se desarrolló una función de optimización automática para ajustar:
+- Número de capas congeladas
+- Tasa de aprendizaje
+- Número de épocas
+
+Las configuraciones que presentaban **sobreajuste excesivo** (pérdida de validación > 150% de la pérdida de entrenamiento) eran descartadas automáticamente.
+
+---
+
+### 🧪 Casos de Prueba
+
+#### ✅ Caso 1: Filtrado por Calidad Informativa
+
+A partir del análisis de **entropía** y **homogeneidad** de las imágenes, se aplicó un filtrado de calidad para eliminar representaciones con bajo contenido informativo (principalmente en Bump y Morlet).  
+Se seleccionaron las 500 imágenes más representativas por clase y se reentrenaron los modelos solo con estas muestras filtradas.
+
+#### 🔁 Caso 2: Validación Cruzada K-Fold
+
+Con el fin de superar las limitaciones del enfoque *hold-out*, se aplicó validación **K-Fold**, que permite utilizar todo el conjunto de datos tanto para entrenamiento como para validación.  
+Este procedimiento se aplicó a la combinación de arquitectura y representación visual más prometedora, con el objetivo de mejorar la robustez y confiabilidad de las métricas.
+
 
 
 
